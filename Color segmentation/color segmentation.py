@@ -33,7 +33,7 @@ def face_segment(path):
     cv2.imwrite('./output/out' + path, skin)
 
 
-for img_path in os.listdir('./'):
-    ext = os.path.splitext(img_path)[1]
+for path in os.listdir('./'):
+    ext = os.path.splitext(path)[1]
     if ext.lower() == '.jpg':
-        face_segment('' + img_path)
+        face_segment('' + path)
